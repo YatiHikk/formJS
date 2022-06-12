@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="send-data.js"></script>
+    <script defer src="valid.js"></script>
+</head>
+
+<body>
+    <form id="studentForm"  name="studentForm" action="#">
+        <label>
+            Student's name
+            <input name="firstNameStudent" 
+            id="firstNameStudent" 
+            type="text"
+            placeholder="Name">
+        </label>
+        <label>
+            Student's LastName
+            <input name="lastNameStudent" 
+            id="lastNameStudent" 
+            type="text"
+            placeholder="Last Name">
+        </label>
+
+        <label>
+            Date Birthday:
+            <input name="dateBirthday" id="dateBirthday" type="date">
+        </label>
+
+        <label>
+            Phone Number:
+            <input id="phone" 
+                placeholder="Phone" 
+                type="tel" name="phone">
+        </label>
+
+        <label>
+            E-mail:
+            <input id="email" placeholder="E-mail" name="email" type="email">
+        </label>
+
+        <label>
+            Student ID number:
+            <input id="idNumber" 
+                name="idNumber" 
+                type="text"
+                placeholder="ID Number">
+        </label>
+
+        <fieldset>
+            <legend>Type of work</legend>
+            <label>
+                <input name="work" value="article" type="checkbox">
+                Article
+            </label>
+            <label>
+                <input name="work" value="grant" type="checkbox">
+                Grant
+            </label>
+            <label>
+                <input name="work" value="сompetition" type="checkbox">
+                Competition
+            </label>
+            <label>
+                <input name="work" value="Forum" type="checkbox">
+                Forum
+            </label>
+        </fieldset>
+
+
+        <p id="sended-data"></p>
+        <button id="applicantFormSubmit" class="flex-column__submit">
+            Sumbit
+        </button>
+
+        <section>
+            <div>
+                <table id="table-content">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>LastName</th>
+                            <th>Date Birthday</th>
+                            <th>Phone Number</th>
+                            <th>E-mail</th>
+                            <th>Student ID number</th>
+                            <th>Type of work</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </section>
+</body>
