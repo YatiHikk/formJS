@@ -1,8 +1,10 @@
-(async () => {
-    let data = await fetch("data.json")
+
+    let data = fetch('http://localhost:3000/students', {
+        method: 'GET',
+    })
         .then(response => response.json());
     addContent(data)
-})();
+console.log(data)
 
 function addContent(listInfo) {
     const main = document.getElementById("table-content");
@@ -10,11 +12,15 @@ function addContent(listInfo) {
     listInfo.forEach(function (item, index) {
         const row = main.insertRow(1 + index);
         const shortObject = {
-            owner: `${item.person.firstname} ${item.person.lastname}`,
-            manufacturer: item.car.manufacturer,
-            model: item.car.model,
-            year: item.car.year,
+            name: item.students.firstNameStudent, 
+            lastName: item.students.lastNameStudent,
+            day: item.students.dateBirthday,
+            phone: item.students.phone,
+            email: item.students.email,
+            idNumber: item.students.idNumber,
+            work: item.students.work,
         };
+        console.log(listInfo)
         
         Object
             .values(shortObject)

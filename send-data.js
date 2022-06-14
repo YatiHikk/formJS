@@ -1,9 +1,10 @@
 function getFormData(form) {
     const formData = new FormData(form);
     const res = {};
-     Array.from(formData.keys()).forEach(key => {
-        res[key] = formData.getAll(key);
-     });
+    Array.from(formData.keys()).forEach(key => {
+        const keyValues = formData.getAll(key);
+        res[key] = keyValues.length > 1 ? keyValues : formData.get(key);
+    });
     return res;
 }
 
@@ -24,7 +25,7 @@ window.addEventListener('load', () => {
         event.preventDefault();
         const data = getFormData(document.forms.studentForm);
         document.getElementById('sended-data').innerText = JSON.stringify(data);
-        // useXmlHttpRequest(data);
+        useXmlHttpRequest(data);
     })
     const studentFormSubmit = document.getElementById('studentFormSubmit');
 
