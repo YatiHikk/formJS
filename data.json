@@ -1,5 +1,5 @@
 {
-  "students":
+  "students": [
     {
       "firstNameStudent": "Yana",
       "lastNameStudent": "Pups",
@@ -10,4 +10,5 @@
       "work": "grant",
       "id": 2
     }
+  ]
 }

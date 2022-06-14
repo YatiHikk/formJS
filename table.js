@@ -1,10 +1,12 @@
-
-    let data = fetch('http://localhost:3000/students', {
+(async () => {
+    const data = await fetch('http://localhost:3000/students', {
         method: 'GET',
-    })
-        .then(response => response.json());
-    addContent(data)
-console.log(data)
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    }).then(response => response.json());
+    addContent(data);
+})();
 
 function addContent(listInfo) {
     const main = document.getElementById("table-content");
@@ -12,13 +14,13 @@ function addContent(listInfo) {
     listInfo.forEach(function (item, index) {
         const row = main.insertRow(1 + index);
         const shortObject = {
-            name: item.students.firstNameStudent, 
-            lastName: item.students.lastNameStudent,
-            day: item.students.dateBirthday,
-            phone: item.students.phone,
-            email: item.students.email,
-            idNumber: item.students.idNumber,
-            work: item.students.work,
+            name: item.firstNameStudent, 
+            lastName: item.lastNameStudent,
+            day: item.dateBirthday,
+            phone: item.phone,
+            email: item.email,
+            idNumber: item.idNumber,
+            work: item.work,
         };
         console.log(listInfo)
         
