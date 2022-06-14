@@ -1,0 +1,14 @@
+{
+  "students": [
+    {
+      "firstNameStudent": "Yana",
+      "lastNameStudent": "Pups",
+      "dateBirthday": "2002-03-21",
+      "phone": "+7(909)804-07-22",
+      "email": "katya.ponomareva.00@mail.ru",
+      "idNumber": "983124",
+      "work": "grant",
+      "id": 2
+    }
+  ]
+}
